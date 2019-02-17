@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 	
 	public static int solve(int[] items, int index, int sum, int cap) {
-		System.out.println("index:"+index+" sum:"+sum+" cap:"+cap);
+		//Write Logic below
 		if (index > items.length - 1 || cap == 0) {
 			return sum;
 		}
