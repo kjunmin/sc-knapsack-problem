@@ -26,7 +26,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("TEST");
+
 		Scanner sc = new Scanner(System.in);
 		
 		int num = sc.nextInt();
