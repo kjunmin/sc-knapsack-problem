@@ -36,7 +36,7 @@ public class Main {
 		}
 		int cap = sc.nextInt();
 		
-		//int[] items = {3, 2, 7, 6, 5, 4};
+		//int[] items = {3, 1, 7, 6, 5, 4};
 		//int cap = 6;
 		
 		System.out.println(solve(items, 0, 0, cap) + 1);
