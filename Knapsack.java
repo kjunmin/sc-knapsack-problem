@@ -5,16 +5,13 @@ public class Main {
 	public static int solve(int[] items, int index, int sum, int cap) {
 		System.out.println("index:"+index+" sum:"+sum+" cap:"+cap);
 		if (index > items.length - 1 || cap == 0) {
-			System.out.println("Returning sum " + sum);
 			return sum;
 		}
 		
 		if (items[index] > cap) {
 			return solve(items, index + 1, sum, cap);
 		} else {
-			System.out.println("Picked " + items[index]);
 			int picked = solve(items, index+1, sum+1, cap - items[index]);
-			System.out.println("Excluded " + items[index]);
 			
 			int excluded = 0;
 			//if item was picked already previously, decrease the sum to prevent double counting
