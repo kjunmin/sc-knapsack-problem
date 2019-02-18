@@ -11,15 +11,9 @@ public class Main {
 		if (items[index] > cap) {
 			return solve(items, index + 1, sum, cap);
 		} else {
-			int picked = solve(items, index+1, sum+1, cap - items[index]);
 			
-			int excluded = 0;
-			//if item was picked already previously, decrease the sum to prevent double counting
-			if (sum > 0) {
-				excluded = solve(items, index+1, sum - 1 , cap);
-			} else {
-				excluded = solve(items, index+1, sum, cap);
-			}
+			int picked = solve(items, index+1, sum+1, cap - items[index]);
+			int excluded = solve(items, index+1, 0, cap);
 			
 			return excluded + picked;
 		}
